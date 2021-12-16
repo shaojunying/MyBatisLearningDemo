@@ -1,9 +1,9 @@
 package com.shao.mybatislearningdemo.article;
 
 public class Article {
-    private int id;
-    private final String title;
-    private final String content;
+    private Integer id;
+    private String title;
+    private String content;
 
     public Article(String title, String content) {
         this.title = title;
@@ -18,7 +18,15 @@ public class Article {
         return content;
     }
 
-    public int getId() {
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Integer getId() {
         return id;
     }
 
