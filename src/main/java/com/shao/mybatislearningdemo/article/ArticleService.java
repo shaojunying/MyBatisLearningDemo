@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArticleService {
     @Autowired
-    private ArticleMapper articleMapper;
+    private final ArticleMapper articleMapper;
+
+    public ArticleService(ArticleMapper articleMapper) {
+        this.articleMapper = articleMapper;
+    }
 
     /**
      * 保存文章
